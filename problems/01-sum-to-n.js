@@ -13,9 +13,23 @@ sumToN(-8)  // returns null
 
 
 function sumToN(n) {
-  // Your code here 
+  // Your code here
+  if (n < 0){
+    return null
+  }
+
+  if(n === 0){
+    return 0
+  };
+
+  return n + sumToN(n - 1)
 }
 
+
+sumToN(5) // returns 15
+sumToN(1)  // returns 1
+sumToN(9)  // returns 45
+sumToN(-8)  // returns null
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
